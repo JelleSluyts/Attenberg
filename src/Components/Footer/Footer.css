@@ -1,0 +1,22 @@
+.wrapperFooter {
+  /*border: 1px solid pink;*/
+  position: fixed;
+  bottom: 0px;
+  width: 100vw;
+  display: grid;
+  /*background-color: white;*/
+  align-content: center;
+  justify-content: center;
+}
+
+.footer {
+  /*border: 1px solid blue;*/
+  width: 100%;
+  padding: 2rem 0rem 2rem 0rem;
+  text-align: center;
+  color: black;
+  font-family: 'Merriweather', sans-serif;
+  font-size: 1rem;
+  text-transform: lowercase;
+  letter-spacing: 8px;
+}

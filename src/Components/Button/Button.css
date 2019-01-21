@@ -1,0 +1,248 @@
+/*
+.menu {
+  width: 3em;
+  height: 3em;
+  position: relative;
+  z-index: 0;
+  border: 2px solid orange;
+}
+
+.menu .bit1::before {
+  content: '';
+  left: 0.5em;
+  top: 0.5em;
+  position: absolute;
+  width: 1em;
+  transform-origin: left bottom;
+  height: 0.3em;
+  background: #2E313C;
+  transition: transform 0.2s, top 0.2s;
+}
+
+.menu .bit1::after {
+  content: '';
+  position: absolute;
+  right: 0.5em;
+  top: 0.5em;
+  width: 1em;
+  transform-origin: right bottom;
+  height: 0.3em;
+  background: #2E313C;
+  transition: transform 0.2s, top 0.2s;
+}
+
+.menu .bit2 {
+  position: absolute;
+  width: 2em;
+  top: 50%;
+  left: 50%;
+  height: 0.3em;
+  background: #2E313C;
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s 0.2s, width 0.2s 0.2s;
+}
+.menu .bit3::before {
+  content: '';
+  position: absolute;
+  bottom: 0.5em;
+  left: 0.5em;
+  width: 1em;
+  transform-origin: left top;
+  height: 0.3em;
+  background: #2E313C;
+  transition: transform 0.2s, bottom 0.2s;
+}
+.menu .bit3::after {
+  content: '';
+  position: absolute;
+  bottom: 0.5em;
+  right: 0.5em;
+  width: 1em;
+  transform-origin: right top;
+  height: 0.3em;
+  background: #2E313C;
+  transition: transform 0.2s, bottom 0.2s;
+}
+.open .bit1:before {
+  top: 0.4em;
+  width: 1.2em;
+  transform: rotate(45deg);
+  transform-origin: left bottom;
+  transition: transform 0.2s 0.2s, width 0.2s 0.2s, top 0.2s 0.2s;
+}
+.menu.open .bit1:after {
+  top: 0.4em;
+  width: 1.2em;
+  transform: rotate(-45deg);
+  transform-origin: right bottom;
+  transition: transform 0.2s 0.2s, width 0.2s 0.2s, top 0.2s 0.2s;
+}
+.menu.open .bit2 {
+  width: 0.3em;
+  transform: translate(-50%, -50%) rotate(45deg);
+  transition: transform 0.2s 0.2s, width 0.2s;
+}
+.menu.open .bit3:before {
+  bottom: 0.4em;
+  width: 1.2em;
+  transform: rotate(-45deg);
+  transform-origin: left top;
+  transition: transform 0.2s 0.2s, width 0.2s 0.2s, bottom 0.2s 0.2s;
+}
+.menu.open .bit3:after {
+  bottom: 0.4em;
+  width: 1.2em;
+  transform: rotate(45deg);
+  transform-origin: right top;
+  transition: transform 0.2s 0.2s, width 0.2s 0.2s, bottom 0.2s 0.2s;
+}
+*/
+
+.hamburger {
+  cursor: pointer;
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  transition: all 0.25s;
+}
+
+.hamburger__TopBun,
+.hamburger__BottomBun {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 15px;
+  width: 18px;
+  height: 1px;
+  background: black;
+  transform: rotate(0);
+  transition: all 0.25s;
+}
+
+.hamburger__TopBun {
+  top: 23px;
+  transform: translateY(-3px);
+}
+
+.hamburger__BottomBun {
+  bottom: 23px;
+  transform: translateY(3px);
+}
+
+.open {
+  transform: rotate(90deg);
+}
+
+.open .hamburger__TopBun {
+  transform:
+    rotate(45deg)
+    translateY(0px);
+}
+
+.open .hamburger__BottomBun {
+  transform:
+    rotate(-45deg)
+    translateY(0px);
+}
+
+/*the following works*/
+/*
+.menu {
+  width: 14px;
+  height: 14px;
+  position: relative;
+  z-index: 0;
+}
+
+.menu .bit1::before {
+  content: '';
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  width: 7px;
+  transform-origin: left bottom;
+  height: 2px;
+  background: black;
+  transition: transform 0.2s, top 0.2s;
+}
+
+.menu .bit1::after {
+  content: '';
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 7px;
+  transform-origin: right bottom;
+  height: 2px;
+  background: black;
+  transition: transform 0.2s, top 0.2s;
+}
+
+.menu .bit2 {
+  content: '';
+  position: absolute;
+  width: 14px;
+  top: 7.5px;
+  left: 50%;
+  height: 2px;
+  background: black;
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s 0.2s, width 0.2s 0.2s;
+}
+.menu .bit3::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0px;
+  width: 7px;
+  transform-origin: left top;
+  height: 2px;
+  background: black;
+  transition: transform 0.2s, bottom 0.2s;
+}
+.menu .bit3::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  right: 0px;
+  width: 7px;
+  transform-origin: right top;
+  height: 2px;
+  background: black;
+  transition: transform 0.2s, bottom 0.2s;
+}
+.open .bit1:before {
+  top: 0px;
+  width: 8px;
+  transform: rotate(45deg);
+  transform-origin: left bottom;
+  transition: transform 0.2s 0.2s, width 0.2s 0.2s, top 0.2s 0.2s;
+}
+.menu.open .bit1:after {
+  top: 0px;
+  width: 8px;
+  transform: rotate(-45deg);
+  transform-origin: right bottom;
+  transition: transform 0.2s 0.2s, width 0.2s 0.2s, top 0.2s 0.2s;
+}
+.menu.open .bit2 {
+  width: 2px;
+  top: 7.5px;
+  transform: translate(-50%, -50%) rotate(45deg);
+  transition: transform 0.2s 0.2s, width 0.2s;
+}
+.menu.open .bit3:before {
+  bottom: -1px;
+  width: 8px;
+  transform: rotate(-45deg);
+  transform-origin: left top;
+  transition: transform 0.2s 0.2s, width 0.2s 0.2s, bottom 0.2s 0.2s;
+}
+.menu.open .bit3:after {
+  bottom: -1px;
+  width: 8px;
+  transform: rotate(45deg);
+  transform-origin: right top;
+  transition: transform 0.2s 0.2s, width 0.2s 0.2s, bottom 0.2s 0.2s;
+}
+*/
