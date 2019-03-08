@@ -1,0 +1,30 @@
+.hamburger {
+  cursor: pointer;
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  transform: rotate(90deg);
+}
+
+.hamburger__TopBun,
+.hamburger__BottomBun {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 15px;
+  width: 18px;
+  height: 2px;
+  background: black;
+}
+
+.hamburger__TopBun {
+  top: 23px;
+  transform:
+    rotate(45deg)
+}
+
+.hamburger__BottomBun {
+  bottom: 23px;
+  transform:
+    rotate(-45deg)
+}

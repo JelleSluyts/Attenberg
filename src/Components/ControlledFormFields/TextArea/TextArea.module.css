@@ -1,0 +1,25 @@
+.container {
+  width: 80vw;
+  display: grid;
+}
+
+.title {
+  font-family: 'Merriweather', serif;
+  font-size: 1rem;
+  letter-spacing: 3px;
+  text-transform: lowercase;
+}
+
+.inputField {
+  height: 100px;
+}
+
+.inputField:focus {
+  outline: 0;
+}
+
+@media only screen and (min-width: 600px) {
+  .container {
+    width: 40vw;
+  }
+}

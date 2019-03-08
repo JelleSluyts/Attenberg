@@ -1,0 +1,36 @@
+.container {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  height: 100vh;
+  box-sizing: border-box;
+  width: 100vw;
+}
+
+input {
+  border: none;
+  text-align: left;
+  padding-left: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-family: 'Merriweather', serif;
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  text-transform: lowercase;
+  background-color: #FAFAFA;
+  box-shadow: none;
+}
+
+label {
+  text-align: left;
+  border-bottom: 1px solid black;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+.btn {
+  position: fixed;
+  top: 1.2rem;
+  right: 6rem;
+}

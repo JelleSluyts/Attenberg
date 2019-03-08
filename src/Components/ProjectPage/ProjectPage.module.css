@@ -1,0 +1,197 @@
+.main {
+  display: flex;
+  position: fixed;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.btn {
+  position: fixed;
+  top: 1.2rem;
+  right: 6rem;
+}
+
+.counter {
+  position: fixed;
+  top: 2.8rem;
+  left: 3rem;
+  font-size: 1.4rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.slideIn {
+  animation-duration:1s;
+  transition-timing-function: ease-in;
+  animation-fill-mode: both;
+  animation-name: fadeIn1;
+}
+
+.slideIn1 {
+  animation-duration:1s;
+  transition-timing-function: ease-in;
+  animation-fill-mode: both;
+  animation-name: fadeIn2;
+}
+
+.image {
+  width: 80vw;
+}
+
+.containerInfo {
+  display: grid;
+  font-family: 'Merriweather', sans-serif;
+  letter-spacing: 8px;
+  width: 60vw;
+  line-height: 2.5rem;
+  font-size: 1.4rem;
+  grid-row-gap: 3px;
+}
+
+.projectTitle {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.projectLocation {
+  font-size: 1rem;
+}
+
+.projectClient {
+  font-size: 1rem;
+}
+
+@keyframes fadeIn1 {
+  0% {
+    opacity: 0;
+    transform: translate3d(20%, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeIn2 {
+  0% {
+    opacity: 0;
+    transform: translate3d(20%, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+  .image {
+    width: 80vw;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .image {
+    width: auto;
+    height: 85vh;
+  }
+
+  .containerInfo {
+    width: 60vw;
+    text-align: center;
+  }
+
+  .container1 {
+    position: fixed;
+    top: 50vh;
+    left: 3.5rem;
+    margin-top: -6px;
+  }
+
+  .container2 {
+    position: fixed;
+    top: 50vh;
+    right: 3.5rem;
+    text-align: right;
+    margin-top: -6px;
+  }
+
+  .mainBtnLeft {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    width: 4px;
+    height: 4px;
+    padding : 3px;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    animation-duration: 1s;
+    transition-timing-function: ease-in;
+    animation-fill-mode: both;
+    animation-name: btnAnim;
+  }
+
+  .mainBtnLeft:focus {
+    outline: 1px solid #fff;
+    outline-offset: -4px;
+    opacity: 1;
+  }
+
+  .mainBtnLeft:active {
+    text-decoration: none;
+    opacity: 1;
+  }
+
+  .mainBtnRight {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    width: 4px;
+    height: 4px;
+    padding : 3px;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    animation-duration: 1s;
+    transition-timing-function: ease-in;
+    animation-fill-mode: both;
+    animation-name: btnAnim;
+  }
+
+  .mainBtnRight:focus {
+    outline: 1px solid #fff;
+    outline-offset: -4px;
+    opacity: 1;
+  }
+
+  .mainBtnRight:active {
+    text-decoration: none;
+    opacity: 1;
+  }
+
+  @keyframes btnAnim {
+    0% {
+      opacity: 0.5;
+      transform: translate3d(20%, 0, 0);
+    }
+
+    100% {
+      opacity: 1;
+      transform: rotate(-135deg) translate3d(0%, 0, 0);
+    }
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  .image {
+    width: auto;
+    height: 70vh;
+  }
+
+  .projectInfo {
+    font-size: 2rem;
+  }
+}

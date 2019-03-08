@@ -1,6 +1,6 @@
 const Wordpress = {
   getProjects() {
-    const projectsUrl = 'http://localhost/wordpress/index.php/wp-json/wp/v2/work?_embed';
+    const projectsUrl = 'http://wordpress.attenberg.be/index.php/wp-json/wp/v2/work?_embed';
     return  fetch(projectsUrl)
       .then(response => { return response.json();
       }

@@ -1,10 +1,10 @@
 import React from 'react';
-import styles from './Button.css';
+import styles from './Button.module.css';
 
 class Button extends React.Component {
   constructor(props) {
-        super(props);
-        this.state = {'active': false, 'class': `${styles.hamburger}`};
+      super(props);
+      this.state = {'active': false, 'class': `${styles.hamburger}`};
     }
 
   handleClick = (id) => {
@@ -21,28 +21,13 @@ class Button extends React.Component {
   }
 
   render() {
-    console.log(this.state.class);
-  return (
+    return (
       <div className={this.state.class} onClick={this.click}>
         <span className={styles.hamburger__TopBun}></span>
         <span className={styles.hamburger__BottomBun}></span>
       </div>
-
-
-    /*
-    <div>
-      <div className={styles.menu}>
-        <div className={this.state.class} onClick={this.click}>
-          <div className={styles.bit1}></div>
-          <div className={styles.bit2}></div>
-          <div className={styles.bit3}></div>
-        </div>
-      </div>
-    </div>
-    */
-  );
+    );
   }
 }
-
 
 export default Button;

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './About.css';
+import styles from './About.module.css';
 import CloseButton from '../../Components/CloseButton/CloseButton.js';
 
 class About extends React.Component {
@@ -13,7 +13,7 @@ class About extends React.Component {
   }
 
   componentDidMount() {
-    const projectsUrl = 'http://localhost/wordpress/index.php/wp-json/wp/v2/about?_embed';
+    const projectsUrl = 'http://wordpress.attenberg.be/index.php/wp-json/wp/v2/about?_embed';
     fetch(projectsUrl)
       .then(res => res.json())
       .then(res => {
@@ -26,23 +26,21 @@ class About extends React.Component {
   }
 
   render() {
-    console.log(this.state.image);
-      return (
-        <div>
-          <div className={styles.container}>
-            <div className={styles.info}>
-              <h1 className={styles.title}>{this.state.title}</h1>
-              <p className={styles.text}>Attenberg is a creative studio specialised in architectural visualisation.</p>
-            </div>
-            <img className={styles.contactImage} src={this.state.image} alt="image"/>
+    return (
+      <div>
+        <div className={styles.container}>
+          <div className={styles.info}>
+            <h1 className={styles.title}>{this.state.title}</h1>
+            <p className={styles.text}>Attenberg is a creative studio specialised in architectural visualisation.</p>
           </div>
-          <div className={styles.btn}>
-            <CloseButton onPress={this.handleClick} />
-          </div>
+          <img className={styles.contactImage} src={this.state.image} alt="render"/>
         </div>
-      );
+        <div className={styles.btn}>
+          <CloseButton onPress={this.handleClick} />
+        </div>
+      </div>
+    );
   }
 }
-
 
 export default About;

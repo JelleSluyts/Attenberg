@@ -1,9 +1,4 @@
-
-
 .projects {
-  /*display: grid;
-  grid-template-columns: 1fr;
-  grid-auto-rows: 100vh;*/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,17 +8,13 @@
 .projectImage {
   cursor: pointer;
   width: 90vw;
-  /*justify-self: center;
-  align-self: center;
-  filter: grayscale() contrast(120%);*/
   animation-duration: 0.75s;
   transition-timing-function: ease-in;
   animation-fill-mode: both;
   animation-name: fadeInUp;
 }
 
-.funky {
-  /*border: 1px solid yellow;*/
+.counter {
   display: grid;
   width: 100vw;
   justify-content: center;
@@ -34,20 +25,6 @@
   text-align: center;
   font-weight: 600;
 }
-
-
-
-/* use for desktop */
-/*
-.funky {
-  position: fixed;
-  bottom: 2rem;
-  right: 3rem;
-  font-size: 1rem;
-  text-align: center;
-  font-weight: 600;
-}
-*/
 
 @keyframes fadeInUp {
   0% {
@@ -63,26 +40,26 @@
 
 @media only screen and (min-width: 600px) and (max-width: 900px) {
   .projectImage {
-    width: 80vw;
-  }
-}
-
-@media only screen and (min-width: 900px) and (max-width: 1200px) {
-  .projectImage {
     width: 70vw;
   }
 }
 
-@media only screen and (min-width: 1200px) and (max-width: 1800px) {
+@media only screen and (min-width: 900px) {
   .projectImage {
     width: auto;
-    height: 70vh;
+    height: 75vh;
   }
-}
 
-@media only screen and (min-width: 1800px) {
-  .projectImage {
-    width: auto;
-    height: 70vh;
+  .counter {
+    display: grid;
+    width: 100vw;
+    justify-content: end;
+    grid-template-columns: 1rem;
+    position: fixed;
+    bottom: 2rem;
+    right: 3rem;
+    font-size: 1.4rem;
+    text-align: right;
+    font-weight: 600;
   }
 }

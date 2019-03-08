@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  box-sizing: border-box;
+  animation-duration:1s;
+  transition-timing-function: ease-in;
+  animation-fill-mode: both;
+  animation-name: fadeIn1;
+}
+
+.text {
+  font-size: 1.6rem;
+  font-family: 'Merriweather', sans-serif;
+  letter-spacing: 8px;
+  width: 60vw;
+  line-height: 2.5rem;
+  text-align: center;
+  padding: 50px;
+}
+
+.home {
+  font-size: 0.8rem;
+  font-family: 'Merriweather', sans-serif;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+
+@keyframes fadeIn1 {
+  0% {
+    opacity: 0;
+    transform: translate3d(10%, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}

@@ -1,8 +1,7 @@
 import React from 'react';
-import styles from './Projects.css';
+import styles from './Projects.module.css';
 import Footer from '../../Components/Footer/Footer.js';
-import ProjectPage from '../../Components/ProjectPage/ProjectPage.js';
-import { Redirect, Link, withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import VisibilitySensor from 'react-visibility-sensor';
 
 class Projects extends React.Component {
@@ -21,7 +20,16 @@ class Projects extends React.Component {
     <div key={post.id}>
       <div className={styles.projects}>
         <VisibilitySensor onChange={isVisible => this._onChange(isVisible, post.title, post.id, index)}>
-          <img src={post.featureImage.media_details.sizes.large.source_url} className={styles.projectImage} alt='projectImage' data-content={post.content}/>
+          <Link to={{pathname: `/ProjectPage/${this.state.title}`,
+                    state: {
+                    info: `${this.state.content}`}
+                  }}>
+            <picture>
+              <source className={styles.projectImage} media="(max-width: 600px)" srcset={post.featureImage.media_details.sizes.medium_large.source_url} />
+              <source className={styles.projectImage} media="(min-width: 600px)" srcset={post.featureImage.media_details.sizes.large.source_url} />
+              <img src={post.featureImage.media_details.sizes.large.source_url} className={styles.projectImage} alt='photorealistic architectural 3d render' data-content={post.content} />
+            </picture>
+          </Link>
         </VisibilitySensor>
       </div>
     </div>
@@ -40,18 +48,14 @@ class Projects extends React.Component {
   render() {
     return (
       <div>
-        <Link to={{pathname: `/ProjectPage/${this.state.title}`,
-                    state: {
-                    info: `${this.state.content}`}
-                  }}>{this.getImages()}
-        </Link>
+        {this.getImages()}
         <Link to={{pathname: `/ProjectPage/${this.state.title}`,
                     state: {
                     info: `${this.state.content}`}
                   }}>
           <Footer title={this.state.title}/>
         </Link>
-        <ul className={styles.funky}>
+        <ul className={styles.counter}>
           <li>{this.state.selectedIndex}</li>
           <li>/</li>
           <li>{this.props.projectList.length}</li>

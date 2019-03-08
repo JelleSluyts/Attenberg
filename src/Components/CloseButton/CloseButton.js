@@ -1,19 +1,5 @@
 import React from 'react';
-import styles from './CloseButton.css';
-import { Link } from 'react-router-dom';
-/*
-class CloseButton extends React.Component {
-  render() {
-  return (
-    <div>
-      <div>
-        <Link to='/' className={styles.closeButton}></Link>
-      </div>
-    </div>
-  );
-  }
-}
-*/
+import styles from './CloseButton.module.css';
 
 class CloseButton extends React.Component {
   static contextTypes = {
@@ -29,6 +15,5 @@ class CloseButton extends React.Component {
     )
   }
 }
-
 
 export default CloseButton;
